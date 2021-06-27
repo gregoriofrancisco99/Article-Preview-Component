@@ -31,10 +31,10 @@ main #wrapper {
 
 main #wrapper section {
   width: 60.6%;
-
   padding: 2.5em;
   
   background: #fff;
+  border-radius: 0 .75em .75em 0;
 }
 
 main #wrapper section article {
@@ -53,6 +53,7 @@ main #wrapper section article p{
 }
 
 main #wrapper section article #social-area{
+  width: 100%;
   margin-top: 1em;
  
   display: flex;
@@ -61,19 +62,35 @@ main #wrapper section article #social-area{
   flex-direction: row;
 }
 
-main #wrapper section article #social-area a {
-  padding: 0.7em 0;
+main #wrapper section article #social-area #share-btn {
+  padding: 1.2em;
+
   background: url('./../images/icon-share.svg') no-repeat, hsl(210, 46%, 95%);
-  background-size: 70%;
+  background-size: 50%;
   background-position: center 40%;
 
-  color: transparent;
-  border-radius: 55em;
+  border: solid 1px hsl(210, 46%, 95%);
+  border-radius: 100% ;
+  cursor: pointer;
 }
 
-main #wrapper section article #social-area #info {
-  width: 45%;
+main #wrapper section article #social-area #share-btn:hover {
+  background: url('./../images/icon-share.svg') no-repeat, hsl(211, 38%, 84%);
+  background-size: 50%;
+  background-position: center 40%;
   
+  border: solid 1px hsl(211, 38%, 84%);
+}
+
+main #wrapper section article #social-area #share-btn:active {
+  background: url('./../images/icon-share.svg') no-repeat, hsl(212, 23%, 69%);
+  background-size: 50%;
+  background-position: center 40%;
+
+  border: solid 1px hsl(212, 23%, 69%);
+}
+
+main #wrapper section article #social-area #info {  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,6 +99,7 @@ main #wrapper section article #social-area #info {
 
 main #wrapper section article #social-area #info #picture {
   width: auto;
+  margin: 0 1em 0 0;
   
 }
 
@@ -94,10 +112,47 @@ main #wrapper section article #social-area #info #picture img {
   border-radius: 100%;
 }
 
+main #wrapper section article #social-area #info #text #username{
+  width: 8.8em;
+  
+  font-weight: 700;
+}
+
 main #wrapper section article #social-area #info #text p{
   font-weight: 100;
 }
 
-main #wrapper section article #social-area #info #text #username{
-  font-weight: 700;
+main #wrapper section article #social-area #pop-up {
+  padding: 1em 2em;
+  background:  hsl(217, 19%, 35%);
+
+  position: absolute;
+  right: 12.9em;
+  bottom: 16.2em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  border-radius: 0.5em;
 }
+
+main #wrapper section article #social-area #pop-up p {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: hsl(212, 23%, 69%);
+}
+
+main #wrapper section article #social-area #pop-up .socialMedia {
+  margin: 0  0 0 1.5em;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main #wrapper section article #social-area #pop-up .socialMedia a:nth-child(2) {
+  margin: 0 1em;
+}
+
